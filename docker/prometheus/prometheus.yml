@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: "sre-app-v2"
+    dns_sd_configs:
+      - names:
+          - sre-app-v2-service.sre-v2.local
+        type: A
+        port: 5000
